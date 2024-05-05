@@ -4,3 +4,5 @@ __pycache__/
 .idea/
 output/
 datasets/HetionetDB-1/graph.txt
+datasets/HetionetDB-1/rules_log
+datasets/HetionetDB-1/rules-1000

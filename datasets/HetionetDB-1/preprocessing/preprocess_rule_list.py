@@ -130,7 +130,7 @@ def filter_rule_dict(dictionary, regex_pattern):
 
 
 def main():
-    dir = "../../../datasets/Hetionet/"
+    dir = "../"
     filepath = dir + "rules-1000"
     outfile = dir + "rules.txt"
 
@@ -142,7 +142,7 @@ def main():
     rule_dict = create_rule_dict(rule_list)
 
     with open(outfile, "w") as f:
-        json.dump(filter_rule_dict(rule_dict, regex_pattern=r"C<\d+>C"), f)
+        json.dump(filter_rule_dict(rule_dict, regex_pattern=r"CaC"), f)
 
 
 if __name__ == "__main__":
