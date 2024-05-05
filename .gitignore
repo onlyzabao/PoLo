@@ -3,4 +3,4 @@ __pycache__/
 *.pyc
 .idea/
 output/
-datasets/Hetionet/graph.txt
+datasets/HetionetDB-1/graph.txt
