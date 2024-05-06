@@ -733,7 +733,7 @@ if __name__ == '__main__':
     logger.info('Total number of entities {}'.format(len(entity_vocab)))
     logger.info('Total number of relations {}'.format(len(relation_vocab)))
     config = tf.compat.v1.ConfigProto()
-    config.gpu_options.allow_growth = False
+    config.gpu_options.allow_growth = True
     config.log_device_placement = False
 
     if not options['load_model']:
