@@ -2,5 +2,9 @@ __pycache__/
 .ipynb_checkpoints
 *.pyc
 .idea/
-output/
-datasets/Hetionet/graph.txt
+output/*
+!output/
+datasets/*
+!datasets/
+configs/*
+!configs/

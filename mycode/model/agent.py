@@ -129,5 +129,6 @@ class Agent(object):
                 all_logits.append(logits)
                 actions_idx.append(idx)
                 prev_relations = chosen_relations
+                states = new_states
 
         return all_loss, all_logits, actions_idx

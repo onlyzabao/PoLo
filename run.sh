@@ -14,4 +14,5 @@ cmd="python mycode/model/trainer.py $params"
 
 echo "Executing $cmd"
 
-CUDA_VISIBLE_DEVICES=$gpu_id $cmd
+# CUDA_VISIBLE_DEVICES=$gpu_id $cmd
+$cmd
