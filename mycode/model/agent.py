@@ -19,7 +19,7 @@ class Agent(object):
         self.train_relations = params['train_relation_embeddings']
         self.use_entity_embeddings = params['use_entity_embeddings']
         if self.use_entity_embeddings:
-            self.m = 4
+            self.m = 2
             self.entity_initializer = tf.keras.initializers.GlorotUniform()
         else:
             self.m = 2
@@ -62,7 +62,8 @@ class Agent(object):
             relation_embedding = tf.compat.v1.nn.embedding_lookup(params=self.relation_lookup_table, ids=next_relations)
             entity_embedding = tf.compat.v1.nn.embedding_lookup(params=self.entity_lookup_table, ids=next_entities)
             if self.use_entity_embeddings:
-                action_embedding = tf.concat([relation_embedding, entity_embedding], axis=-1)
+                # action_embedding = tf.concat([relation_embedding, entity_embedding], axis=-1)
+                action_embedding = entity_embedding + relation_embedding
             else:
                 action_embedding = relation_embedding
         return action_embedding
