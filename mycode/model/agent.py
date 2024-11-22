@@ -63,6 +63,7 @@ class Agent(object):
             entity_embedding = tf.compat.v1.nn.embedding_lookup(params=self.entity_lookup_table, ids=next_entities)
             if self.use_entity_embeddings:
                 action_embedding = tf.concat([relation_embedding, entity_embedding], axis=-1)
+                # action_embedding = entity_embedding + relation_embedding
             else:
                 action_embedding = relation_embedding
         return action_embedding
