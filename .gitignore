@@ -8,3 +8,4 @@ datasets/*
 !datasets/
 configs/*
 !configs/
+run.sh
