@@ -3,9 +3,6 @@ __pycache__/
 *.pyc
 .idea/
 output/*
-!output/
 datasets/*
-!datasets/
 configs/*
-!configs/
 run.sh
